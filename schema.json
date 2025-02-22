@@ -1,0 +1,23 @@
+{
+  "type": "component",
+  "metadata": {},
+  "schema": {
+    "name": "Advanced-Diagramm-BB",
+    "friendlyName": "Advanced-Diagramm-BB",
+    "description": "An advanced diagramm",
+    "icon": "Text",
+    "settings": [
+      {
+        "type": "text",
+        "key": "text",
+        "label": "Text"
+      },
+      {
+        "type": "dataProvider",
+        "label": "Data provider",
+        "key": "dataProvider",
+        "required": true
+      }
+    ]
+  }
+}
