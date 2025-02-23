@@ -17,7 +17,26 @@
         "label": "Data provider",
         "key": "dataProvider",
         "required": true
+      },
+      {
+        "section": true,
+        "name": "General options",
+        "settings": [
+          {
+            "type": "number",
+            "label": "Chart height",
+            "key": "chartHeight",
+            "defaultValue": 400
+          },
+          {
+            "type": "number",
+            "label": "Chart width",
+            "key": "chartWidth",
+            "info": "If left null, width will be 100%"
+          }
+        ]
       }
     ]
+    
   }
 }

@@ -3,8 +3,8 @@
   import { chart } from "svelte-apexcharts";
 
   export let dataProvider //
-  export let serieField //
-  export let selectionMethod ////
+  export let chartWidth //
+  export let chartHeight //
 
   $: rows = (dataProvider && dataProvider.rows)
     ? (Array.isArray(dataProvider.rows)
@@ -61,7 +61,7 @@
   $: options = {
     chart: {
       type: "line",
-      width: "100%"
+      height: chartHeight
     },
     series,
     xaxis: {
@@ -69,7 +69,9 @@
     }
   };
 
-
+  if (chartWidth != null){
+    options.chart.width = chartWidth;
+  };
 
   const { styleable } = getContext("sdk")
   const component = getContext("component")
