@@ -5,6 +5,7 @@
   export let dataProvider //
   export let chartWidth //
   export let chartHeight //
+  export let seriesNames
 
   $: rows = (dataProvider && dataProvider.rows)
     ? (Array.isArray(dataProvider.rows)
@@ -62,6 +63,9 @@
     chart: {
       type: "line",
       height: chartHeight
+    },
+    stroke: {
+      curve: 'stepline'
     },
     series,
     xaxis: {
