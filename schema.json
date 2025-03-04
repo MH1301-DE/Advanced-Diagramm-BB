@@ -29,10 +29,10 @@
             "defaultValue": 400
           },
           {
-            "type": "text",
+            "type": "number",
             "label": "Chart width",
             "key": "chartWidth",
-            "info": "If left null, width will be 100%. Has to be given in % (80%)"
+            "info": "If left null, width will be 100%"
           }
         ]
       }
