@@ -44,18 +44,18 @@
     //   ];
 
   // Extrahiere alle eindeutigen NodeIds
-  $: uniqueNodes = Array.from(new Set(rows.map(row => row.NodeId)));
+  $: uniqueName = Array.from(new Set(rows.map(row => row.Name)));
 
   // // Erzeuge das series-Array: Für jede NodeId wird ein Array von Datenpunkten erstellt,
   // // in dem x der Timestamp (als Number) und y der zugehörige Value ist.
-  $: series = uniqueNodes.map(nodeId => {
+  $: series = uniqueName.map(Name => {
     const dataPoints = rows
-      .filter(row => row.NodeId === nodeId)
+      .filter(row => row.Name === Name)
       .map(row => ({
         x: new Date(row.SourceTimestamp).getTime(),
         y: row.Value
       }));
-    return { name: nodeId, data: dataPoints };
+    return { name: Name, data: dataPoints };
   });
   // // Options-Objekt im Format, das z. B. ApexCharts erwartet
   $: options = {
